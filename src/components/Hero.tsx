@@ -20,6 +20,7 @@ export function Hero() {
               sizes="100vw"
             />
           </div>
+          <div className="eth-hero-tint" aria-hidden />
           <div className="eth-hero-scrim" aria-hidden />
 
           <div className="eth-hero-inner">
