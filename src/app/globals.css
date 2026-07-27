@@ -1,0 +1,363 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --eth-blue: #3d89e8;
+  --eth-purple: #743b93;
+  --eth-spark: #8ec5f5;
+  --eth-ink: #1c2328;
+  --eth-content-max: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F7FAFC] font-body text-eth-body text-eth-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading font-semibold text-eth-ink;
+  }
+
+  h1 {
+    @apply text-eth-h1;
+  }
+
+  h2 {
+    @apply text-eth-h2;
+  }
+
+  h3 {
+    @apply text-eth-h3;
+  }
+
+  h4 {
+    @apply text-eth-h4;
+  }
+}
+
+@layer components {
+  .section-eyebrow {
+    @apply font-heading text-eth-h4 font-semibold uppercase tracking-[0.14em] text-eth-blue;
+  }
+
+  .text-lead {
+    @apply text-eth-large text-eth-slate;
+  }
+
+  .text-small {
+    @apply text-eth-small text-eth-slate;
+  }
+
+  .eth-section {
+    @apply scroll-mt-24 py-20 sm:py-24 lg:py-28;
+  }
+
+  .eth-section-alt {
+    @apply bg-gradient-to-b from-eth-mist via-eth-mist to-white;
+  }
+
+  .eth-section-header {
+    @apply mx-auto max-w-2xl text-center;
+  }
+
+  .eth-fade-up {
+    @apply animate-fade-up;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    @apply inline-flex h-12 min-h-12 items-center justify-center gap-2 rounded-full px-7 text-sm font-semibold transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-[0.98];
+  }
+
+  .btn-primary {
+    @apply bg-eth-blue text-white shadow-soft hover:bg-eth-blue-dark hover:shadow-card focus-visible:outline-eth-blue;
+  }
+
+  .btn-secondary {
+    @apply border border-[rgba(28,35,40,0.12)] bg-white text-eth-ink hover:border-[rgba(61,137,232,0.4)] hover:bg-eth-blue-soft focus-visible:outline-eth-blue;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-[rgba(28,35,40,0.7)] transition-colors hover:text-eth-blue;
+  }
+
+  .eth-icon-badge {
+    @apply inline-flex rounded-2xl bg-eth-purple-soft p-3.5 text-eth-purple ring-1 ring-[rgba(116,59,147,0.14)];
+  }
+
+  .eth-surface {
+    @apply rounded-card border border-[rgba(28,35,40,0.06)] bg-white shadow-soft transition duration-300;
+  }
+
+  .eth-surface-hover {
+    @apply eth-surface hover:-translate-y-1 hover:shadow-card;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eth-fade-up,
+  .animate-fade-in,
+  .animate-draw-line,
+  .eth-marquee-track {
+    animation: none !important;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    transition: none;
+  }
+
+  .eth-marquee-track {
+    width: 100% !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1.5rem;
+    transform: none !important;
+  }
+
+  .eth-marquee-track > ul:last-child {
+    display: none !important;
+  }
+}
+
+@keyframes eth-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.eth-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.eth-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: eth-marquee 38s linear infinite;
+}
+
+.eth-marquee:hover .eth-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Header — overlays hero so imagery runs behind the nav */
+.eth-nav-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 0.85rem clamp(1rem, 3vw, 1.75rem) 0;
+  pointer-events: none;
+  transition: padding 0.25s ease, background 0.25s ease;
+}
+
+.eth-nav-wrap > * {
+  pointer-events: auto;
+}
+
+.eth-nav-wrap.is-scrolled {
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(255, 255, 255, 0.72) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(8px);
+}
+
+.eth-nav-bar {
+  margin: 0 auto;
+  display: flex;
+  max-width: var(--eth-content-max);
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.88);
+  padding: 0.55rem 0.65rem 0.55rem 0.85rem;
+  box-shadow: 0 12px 40px -24px rgba(28, 35, 40, 0.35);
+  backdrop-filter: blur(14px);
+  transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.eth-nav-bar.is-scrolled {
+  border-color: rgba(28, 35, 40, 0.08);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 16px 40px -22px rgba(28, 35, 40, 0.28);
+}
+
+.eth-nav-pill {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+@media (min-width: 1024px) {
+  .eth-nav-pill {
+    display: flex;
+  }
+}
+
+/* Full-bleed cinematic hero with inset card on large screens */
+.eth-hero {
+  position: relative;
+  isolation: isolate;
+  padding: 0;
+}
+
+.eth-hero-shell {
+  padding: 0;
+}
+
+.eth-hero-card {
+  position: relative;
+  isolation: isolate;
+  min-height: min(100svh, 920px);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  background: #1c2328;
+}
+
+@media (max-width: 1023px) {
+  .eth-hero-card {
+    align-items: center;
+    min-height: min(100svh, 860px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .eth-hero {
+    padding: 5.75rem clamp(1rem, 2.5vw, 1.75rem) 1.25rem;
+  }
+
+  .eth-hero-card {
+    min-height: min(86vh, 820px);
+    border-radius: 2rem;
+    box-shadow: 0 28px 80px -36px rgba(28, 35, 40, 0.55);
+  }
+}
+
+.eth-hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.eth-hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 70% 40%,
+    rgba(61, 137, 232, 0.18),
+    transparent 55%
+  );
+  pointer-events: none;
+}
+
+.eth-hero-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    115deg,
+    rgba(16, 22, 28, 0.88) 0%,
+    rgba(28, 35, 40, 0.72) 38%,
+    rgba(28, 35, 40, 0.35) 68%,
+    rgba(116, 59, 147, 0.22) 100%
+  );
+}
+
+/* Static composite: theme-tinted wash; readable left copy, soft darken across hero */
+.eth-hero--static .eth-hero-scrim {
+  background: linear-gradient(
+    100deg,
+    rgba(28, 35, 40, 0.74) 0%,
+    rgba(28, 35, 40, 0.48) 30%,
+    rgba(61, 137, 232, 0.28) 55%,
+    rgba(116, 59, 147, 0.2) 78%,
+    rgba(28, 35, 40, 0.28) 100%
+  );
+}
+
+.eth-hero--static .eth-hero-media::after {
+  background: linear-gradient(
+    90deg,
+    rgba(16, 22, 28, 0.22) 0%,
+    rgba(61, 137, 232, 0.12) 45%,
+    rgba(28, 35, 40, 0.14) 100%
+  );
+}
+
+@media (max-width: 1023px) {
+  .eth-hero-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(16, 22, 28, 0.45) 0%,
+      rgba(28, 35, 40, 0.7) 48%,
+      rgba(16, 22, 28, 0.9) 100%
+    );
+  }
+
+  .eth-hero--static .eth-hero-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(28, 35, 40, 0.5) 0%,
+      rgba(61, 137, 232, 0.26) 40%,
+      rgba(28, 35, 40, 0.8) 100%
+    );
+  }
+
+  .eth-hero--static .eth-hero-media::after {
+    background: linear-gradient(
+      180deg,
+      rgba(16, 22, 28, 0.16) 0%,
+      transparent 42%,
+      rgba(28, 35, 40, 0.2) 100%
+    );
+  }
+}
+
+.eth-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 6.5rem 0 3.5rem;
+}
+
+@media (min-width: 640px) {
+  .eth-hero-inner {
+    padding: 7.5rem 0 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .eth-hero-inner {
+    padding: 5.5rem 0 4.75rem;
+  }
+}
+
+
