@@ -223,6 +223,27 @@ export const copy = {
     headline: "Spravato® (esketamine) Treatment Patient Videos",
     body: "Hear directly from people who’ve walked this path — real experiences with Spravato® treatment at clinics like ours.",
   },
+  providers: {
+    eyebrow: "Your Care Team",
+    headline: "Meet Your Providers",
+    body: "Experienced psychiatric providers guide your Spravato® care with compassion, clarity, and clinical expertise.",
+    items: [
+      {
+        name: "Lindsay Moyer",
+        role: "Psychiatry, APRN, PMHNP",
+        image: "/images/provider-lindsay.webp",
+        alt: "Lindsay Moyer, Psychiatry APRN PMHNP at Etherios Therapy",
+        bio: "Experienced in Spravato® and ketamine treatment, medication management, and ADHD care. Lindsay brings over 18 years of nursing experience and a compassionate, collaborative approach for adolescents and adults who want thoughtful, judgment-free support.",
+      },
+      {
+        name: "Regan Haight",
+        role: "Integrative Psychiatry, APRN, PMHNP",
+        image: "/images/provider-regan.webp",
+        alt: "Regan Haight, Integrative Psychiatry APRN PMHNP at Etherios Therapy",
+        bio: "Blends conventional psychiatry with whole-person care — gut–brain health, lifestyle, and trauma-informed approaches. Regan’s focus goes beyond symptoms to create personalized plans that support lasting wellness.",
+      },
+    ],
+  },
   book: {
     eyebrow: "Book a Consultation",
     headline: "Talk with our team — free, low-pressure, and informative",
