@@ -119,7 +119,7 @@ export function Header() {
 
           <button
             type="button"
-            className="relative z-[80] inline-flex h-11 w-11 items-center justify-center rounded-full bg-eth-mist text-eth-ink lg:hidden"
+            className="relative z-[80] inline-flex h-11 w-11 items-center justify-center rounded-full bg-eth-mist text-eth-ink xl:hidden"
             onClick={() => setOpen((prev) => !prev)}
             aria-expanded={open}
             aria-controls="mobile-nav"
@@ -132,7 +132,7 @@ export function Header() {
         {open && (
           <div
             id="mobile-nav"
-            className="absolute left-[clamp(1rem,3vw,1.75rem)] right-[clamp(1rem,3vw,1.75rem)] top-full z-[70] mt-2 flex flex-col gap-1 rounded-3xl border border-[rgba(28,35,40,0.1)] bg-white px-4 py-4 shadow-lift lg:hidden"
+            className="absolute left-[clamp(1rem,3vw,1.75rem)] right-[clamp(1rem,3vw,1.75rem)] top-full z-[70] mt-2 flex flex-col gap-1 rounded-3xl border border-[rgba(28,35,40,0.1)] bg-white px-4 py-4 shadow-lift xl:hidden"
           >
             {navLinks.map((link) => (
               <a

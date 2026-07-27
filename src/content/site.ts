@@ -27,13 +27,14 @@ export const site = {
       poster: "/images/patient-videos/grace.jpg",
     },
   ],
-  /** Active static hero composite (clinic + SPRAVATO® + spray baked in) */
-  heroImage: "/images/new-hero.png",
+  /** Active hero background — clinic interior */
+  heroImage: "/images/office-interior.webp",
   /**
-   * Kept for later comparison / switch-back — not used in Hero right now.
+   * Kept for later comparison / switch-back.
    */
-  heroLobbyImage: "/images/hero-lobby.webp",
+  heroLobbyImage: "/images/office-lobby.webp",
   heroSprayImage: "/images/spravato-spray.png",
+  heroCompositeImage: "/images/new-hero.png",
   heroVideoSrc:
     "https://video.squarespace-cdn.com/content/v1/64cab3b0889d451362607174/88e2a663-1d43-45d6-8941-b804eccaa9e0/playlist.m3u8",
   heroVideoPoster: "/images/hero-clinic.webp",

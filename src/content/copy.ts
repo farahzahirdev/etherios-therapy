@@ -24,6 +24,11 @@ export const copy = {
       "FDA-approved esketamine nasal spray for adults who haven’t found enough relief from traditional antidepressants — delivered in a calm, supportive clinic.",
     primaryCta: "Book a Free Consultation",
     secondaryCta: "Submit an Inquiry",
+    sprayCard: {
+      title: "Spravato® (Esketamine)",
+      subtitle: "Nasal Spray for Depression Covered in Utah",
+      alt: "Spravato® esketamine nasal spray device",
+    },
     chips: [
       "FDA-approved",
       "Insurance accepted",
