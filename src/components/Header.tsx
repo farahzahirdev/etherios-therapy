@@ -9,7 +9,7 @@ import { site } from "@/content/site";
 const navLinks = [
   { href: "/#spravato", label: copy.header.nav.spravato },
   { href: "/#expect", label: copy.header.nav.expect },
-  { href: "/#journey", label: copy.header.nav.journey },
+  { href: "/#why", label: copy.header.nav.why },
   { href: "/#insurance", label: copy.header.nav.insurance },
   { href: "/#faq", label: copy.header.nav.faq },
 ];

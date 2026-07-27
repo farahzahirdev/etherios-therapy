@@ -3,7 +3,7 @@ export const copy = {
     nav: {
       spravato: "Spravato®",
       expect: "What to Expect",
-      journey: "Treatment Day",
+      why: "Why Etherios",
       rooms: "Our Rooms",
       insurance: "Insurance",
       faq: "FAQ",

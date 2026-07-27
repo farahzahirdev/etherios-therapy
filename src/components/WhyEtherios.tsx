@@ -6,7 +6,7 @@ const icons = [Leaf, HeartHandshake, Layers];
 
 export function WhyEtherios() {
   return (
-    <section aria-labelledby="why-heading" className="eth-section-compact">
+    <section id="why" aria-labelledby="why-heading" className="eth-section-compact">
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-14">
           <div className="eth-fade-up mx-auto max-w-xl text-center lg:mx-0 lg:max-w-none lg:text-left">
