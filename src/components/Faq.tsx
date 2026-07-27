@@ -67,16 +67,11 @@ function FaqItem({
 }
 
 export function Faq() {
-  const [open, setOpen] = useState<Set<number>>(() => new Set([0]));
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
   const items = copy.faq.items;
 
   const toggle = (index: number) => {
-    setOpen((prev) => {
-      const next = new Set(prev);
-      if (next.has(index)) next.delete(index);
-      else next.add(index);
-      return next;
-    });
+    setOpenIndex((prev) => (prev === index ? null : index));
   };
 
   return (
@@ -96,7 +91,7 @@ export function Faq() {
               key={item.q}
               question={item.q}
               answer={item.a}
-              open={open.has(index)}
+              open={openIndex === index}
               onToggle={() => toggle(index)}
             />
           ))}
@@ -112,7 +107,7 @@ export function Faq() {
                   key={item.q}
                   question={item.q}
                   answer={item.a}
-                  open={open.has(index)}
+                  open={openIndex === index}
                   onToggle={() => toggle(index)}
                 />
               );
@@ -126,7 +121,7 @@ export function Faq() {
                   key={item.q}
                   question={item.q}
                   answer={item.a}
-                  open={open.has(index)}
+                  open={openIndex === index}
                   onToggle={() => toggle(index)}
                 />
               );
