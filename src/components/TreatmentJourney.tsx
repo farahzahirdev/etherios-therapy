@@ -7,7 +7,7 @@ const icons = [ClipboardList, HeartPulse, Home];
 
 export function TreatmentJourney() {
   return (
-    <section id="journey" aria-labelledby="journey-heading" className="eth-section">
+    <section id="journey" aria-labelledby="journey-heading" className="eth-section-compact">
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="eth-section-header eth-fade-up max-w-3xl">
           <p className="section-eyebrow">{copy.journey.eyebrow}</p>

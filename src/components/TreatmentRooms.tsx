@@ -3,7 +3,7 @@ import { copy } from "@/content/copy";
 
 export function TreatmentRooms() {
   return (
-    <section id="rooms" aria-labelledby="rooms-heading" className="eth-section eth-section-alt">
+    <section id="rooms" aria-labelledby="rooms-heading" className="eth-section-compact eth-section-alt">
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="eth-section-header eth-fade-up max-w-3xl">
           <p className="section-eyebrow">{copy.rooms.eyebrow}</p>

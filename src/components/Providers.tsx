@@ -6,7 +6,7 @@ export function Providers() {
     <section
       id="providers"
       aria-labelledby="providers-heading"
-      className="eth-section eth-section-alt !pb-10 sm:!pb-12 lg:!pb-14"
+      className="eth-section-compact eth-section-alt !pb-10 sm:!pb-12 lg:!pb-14"
     >
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="eth-section-header eth-fade-up max-w-3xl">

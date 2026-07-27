@@ -4,7 +4,7 @@ import { Button } from "./Button";
 
 export function WhatToExpect() {
   return (
-    <section id="expect" aria-labelledby="expect-heading" className="eth-section">
+    <section id="expect" aria-labelledby="expect-heading" className="eth-section-compact">
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="eth-section-header eth-fade-up">
           <p className="section-eyebrow">{copy.expect.eyebrow}</p>

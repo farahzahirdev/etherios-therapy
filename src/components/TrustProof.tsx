@@ -3,7 +3,7 @@ import { copy } from "@/content/copy";
 export function TrustProof() {
   return (
     <section aria-labelledby="proof-heading" className="eth-section-alt">
-      <div className="mx-auto max-w-content px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <div className="mx-auto max-w-content px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
         <div className="eth-section-header eth-fade-up max-w-3xl">
           <p className="section-eyebrow">{copy.proof.eyebrow}</p>
           <h2 id="proof-heading" className="mt-3">
@@ -11,7 +11,7 @@ export function TrustProof() {
           </h2>
         </div>
 
-        <ul className="eth-fade-up mt-12 grid gap-5 sm:grid-cols-3">
+        <ul className="eth-fade-up mt-8 grid gap-5 sm:grid-cols-3 lg:mt-10">
           {copy.proof.items.map((item, index) => (
             <li
               key={item.title}

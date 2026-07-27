@@ -6,7 +6,7 @@ import { Button } from "./Button";
 
 export function WhoItsFor() {
   return (
-    <section aria-labelledby="who-heading" className="eth-section eth-section-alt">
+    <section aria-labelledby="who-heading" className="eth-section-compact eth-section-alt">
       <div className="mx-auto grid max-w-content items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
         <div className="eth-fade-up order-2 mx-auto max-w-xl space-y-6 text-center lg:order-1 lg:mx-0 lg:max-w-none lg:text-left">
           <p className="section-eyebrow">{copy.who.eyebrow}</p>

@@ -72,7 +72,7 @@ export function PatientVideos() {
     <section
       id="patient-videos"
       aria-labelledby="patient-videos-heading"
-      className="eth-section"
+      className="eth-section-compact"
     >
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="eth-section-header eth-fade-up max-w-3xl">

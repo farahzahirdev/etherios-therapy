@@ -60,6 +60,10 @@ html {
     @apply scroll-mt-24 py-20 sm:py-24 lg:py-28;
   }
 
+  .eth-section-compact {
+    @apply scroll-mt-24 py-12 sm:py-14 lg:py-16;
+  }
+
   .eth-section-alt {
     @apply bg-gradient-to-b from-eth-mist via-eth-mist to-white;
   }
