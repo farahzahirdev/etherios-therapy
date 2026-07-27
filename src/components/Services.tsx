@@ -4,7 +4,7 @@ import { Button } from "./Button";
 
 export function Services() {
   return (
-    <section aria-labelledby="services-heading" className="eth-section">
+    <section aria-labelledby="services-heading" className="eth-section !pb-10 sm:!pb-12 lg:!pb-14">
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="eth-section-header eth-fade-up max-w-3xl">
           <p className="section-eyebrow">{copy.services.eyebrow}</p>

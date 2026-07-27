@@ -7,7 +7,7 @@ export function Inquiry() {
   return (
     <section id="inquiry" aria-labelledby="inquiry-heading" className="eth-section">
       <div className="mx-auto grid max-w-content items-start gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
-        <div className="eth-fade-up mx-auto max-w-xl space-y-6 text-center lg:mx-0 lg:max-w-none lg:sticky lg:top-28 lg:text-left">
+        <div className="eth-fade-up mx-auto max-w-xl space-y-6 text-center lg:mx-0 lg:max-w-none lg:text-left">
           <p className="section-eyebrow">{copy.inquiry.eyebrow}</p>
           <h2 id="inquiry-heading">{copy.inquiry.headline}</h2>
           <p className="text-lead mx-auto lg:mx-0">{copy.inquiry.body}</p>

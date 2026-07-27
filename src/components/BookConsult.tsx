@@ -8,7 +8,7 @@ export function BookConsult() {
   return (
     <section
       id="book-consult"
-      className="eth-section eth-section-alt"
+      className="eth-section eth-section-alt !pt-10 sm:!pt-12 lg:!pt-14"
       aria-labelledby="book-heading"
     >
       <div className="mx-auto grid max-w-content items-start gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
