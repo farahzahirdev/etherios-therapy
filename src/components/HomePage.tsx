@@ -11,6 +11,7 @@ import { TreatmentRooms } from "./TreatmentRooms";
 import { WhyEtherios } from "./WhyEtherios";
 import { TrustProof } from "./TrustProof";
 import { Insurance } from "./Insurance";
+import { PatientVideos } from "./PatientVideos";
 import { SpravatoVideo } from "./SpravatoVideo";
 import { Services } from "./Services";
 import { InlineCta } from "./InlineCta";
@@ -35,6 +36,7 @@ export function HomePage() {
         <TreatmentRooms />
         <WhyEtherios />
         <TrustProof />
+        <PatientVideos />
         <Insurance />
         <SpravatoVideo />
         <Services />

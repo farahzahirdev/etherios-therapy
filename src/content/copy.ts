@@ -218,6 +218,11 @@ export const copy = {
     headline: "What a Spravato® session looks like",
     body: "Curious how treatment is administered and what to expect during your appointment? Watch this short overview from our clinic.",
   },
+  patientVideos: {
+    eyebrow: "Patient Stories",
+    headline: "Spravato® (esketamine) Treatment Patient Videos",
+    body: "Hear directly from people who’ve walked this path — real experiences with Spravato® treatment at clinics like ours.",
+  },
   book: {
     eyebrow: "Book a Consultation",
     headline: "Talk with our team — free, low-pressure, and informative",

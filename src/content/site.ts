@@ -12,6 +12,21 @@ export const site = {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.5!2d-111.7047374!3d40.2977041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x44f730e57093ee05%3A0x4673a945d615f6df!2sEtherios%20Therapy!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus",
   spravatoVideoEmbedUrl: "https://www.youtube.com/embed/wdAdL6seApc",
   spravatoVideoTitle: "Tour Our Ketamine & Spravato Treatment Rooms at Etherios Therapy",
+  /** Brightcove patient story embeds from etheriostherapy.com/spravato */
+  patientVideos: [
+    {
+      id: "6350191494112",
+      title: "SPRAVATO® patient story — Nicole P.",
+      src: "https://players.brightcove.net/4317630935001/default_default/index.html?videoId=6350191494112",
+      poster: "/images/patient-videos/nicole.jpg",
+    },
+    {
+      id: "6349171660112",
+      title: "SPRAVATO® patient story — Grace",
+      src: "https://players.brightcove.net/4317630935001/default_default/index.html?videoId=6349171660112",
+      poster: "/images/patient-videos/grace.jpg",
+    },
+  ],
   /** Active static hero composite (clinic + SPRAVATO® + spray baked in) */
   heroImage: "/images/new-hero.png",
   /**
