@@ -271,7 +271,7 @@ html {
 }
 
 .eth-hero-media img {
-  filter: saturate(0.78) brightness(0.88) contrast(1.05);
+  filter: saturate(0.72) brightness(0.88) contrast(1.05);
 }
 
 .eth-hero-tint {
@@ -288,7 +288,7 @@ html {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  /* Badlands-strength layered wash — Etherios blue/purple/ink */
+  /* Badlands / Rogue Valley strength — Etherios blue / purple / ink */
   background:
     linear-gradient(
       135deg,
@@ -305,9 +305,9 @@ html {
     ),
     linear-gradient(
       90deg,
-      rgba(28, 35, 40, 0.42) 0%,
-      rgba(61, 137, 232, 0.28) 48%,
-      rgba(28, 35, 40, 0.36) 100%
+      rgba(28, 35, 40, 0.68) 0%,
+      rgba(61, 137, 232, 0.28) 42%,
+      transparent 74%
     ),
     rgba(28, 35, 40, 0.2);
 }
@@ -329,9 +329,9 @@ html {
     ),
     linear-gradient(
       90deg,
-      rgba(28, 35, 40, 0.42) 0%,
-      rgba(61, 137, 232, 0.28) 48%,
-      rgba(28, 35, 40, 0.36) 100%
+      rgba(28, 35, 40, 0.68) 0%,
+      rgba(61, 137, 232, 0.28) 42%,
+      transparent 74%
     ),
     rgba(28, 35, 40, 0.2);
 }
@@ -346,14 +346,14 @@ html {
     background:
       linear-gradient(
         180deg,
-        rgba(28, 35, 40, 0.45) 0%,
-        rgba(61, 137, 232, 0.22) 38%,
-        rgba(28, 35, 40, 0.78) 100%
+        rgba(28, 35, 40, 0.48) 0%,
+        rgba(61, 137, 232, 0.24) 38%,
+        rgba(28, 35, 40, 0.82) 100%
       ),
       linear-gradient(
         135deg,
-        rgba(61, 137, 232, 0.32) 0%,
-        rgba(116, 59, 147, 0.14) 50%,
+        rgba(61, 137, 232, 0.36) 0%,
+        rgba(116, 59, 147, 0.16) 50%,
         transparent 78%
       ),
       rgba(28, 35, 40, 0.22);
@@ -361,7 +361,7 @@ html {
 
   .eth-hero-tint,
   .eth-hero--static .eth-hero-tint {
-    background: rgba(61, 137, 232, 0.24);
+    background: rgba(61, 137, 232, 0.26);
   }
 }
 
