@@ -33,7 +33,7 @@ export const copy = {
       "FDA-approved",
       "Insurance accepted",
       "Supervised in-clinic care",
-      "Relief in hours, not weeks",
+      "Quick relief",
     ],
   },
   trust: {
@@ -253,6 +253,9 @@ export const copy = {
     eyebrow: "Book a Consultation",
     headline: "Talk with our team — free, low-pressure, and informative",
     body: "Schedule a free 10-minute consultation to ask questions, learn about eligibility, and see whether Spravato® could be right for you.",
+    successTitle: "You’re booked",
+    successBody:
+      "Thanks for scheduling your free consultation. Check your email for confirmation details — we look forward to talking with you.",
   },
   inquiry: {
     eyebrow: "Submit an Inquiry",

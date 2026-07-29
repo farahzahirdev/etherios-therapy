@@ -30,7 +30,7 @@ export function BookConsult() {
         </div>
 
         <div className="eth-fade-up" style={{ animationDelay: "100ms" }}>
-          <div className="overflow-hidden rounded-card border border-[rgba(28,35,40,0.08)] bg-white p-2 shadow-lift sm:p-3">
+          <div className="min-h-[22rem] overflow-hidden rounded-card border border-[rgba(28,35,40,0.08)] bg-white p-2 shadow-lift sm:p-3">
             <GhlCalendarEmbed />
           </div>
         </div>
