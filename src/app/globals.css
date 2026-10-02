@@ -410,4 +410,20 @@ html {
   }
 }
 
+/*
+  GHL form_embed.js hides booking/form iframes (opacity:0; left:-9999px;
+  data-initial-iframe-hidden) until a resize handshake. On *.4tms.com hosts that
+  reveal often never fires, leaving a blank white calendar. Force them visible.
+*/
+iframe[src*="go.4tms.com/widget/"][data-initial-iframe-hidden="true"],
+iframe[src*="go.4tms.com/widget/"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+}
+
 

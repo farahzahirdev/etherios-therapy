@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { CheckCircle2, Phone } from "lucide-react";
 import { copy } from "@/content/copy";
 import { site } from "@/content/site";
+import { revealGhlIframe } from "@/lib/ghlReveal";
 
 const calendar = site.ghl.calendar;
 const CALENDAR_HEIGHT = 720;
@@ -185,6 +186,10 @@ export function GhlCalendarEmbed() {
     if (!iframe || booked) return;
 
     const checkCollapsed = () => {
+      // form_embed.js parks the iframe off-screen (opacity:0; left:-9999px) until
+      // resize — on etheriostherapy.4tms.com that reveal often never fires.
+      revealGhlIframe(iframe);
+
       const height = readReportedHeight(iframe);
       if (height === null) return;
 
@@ -201,17 +206,23 @@ export function GhlCalendarEmbed() {
     const mutations = new MutationObserver(checkCollapsed);
     mutations.observe(iframe, {
       attributes: true,
-      attributeFilter: ["style", "height"],
+      attributeFilter: ["style", "height", "data-initial-iframe-hidden"],
     });
 
     const resize = new ResizeObserver(checkCollapsed);
     resize.observe(iframe);
     checkCollapsed();
 
+    // Keep forcing reveal while form_embed.js may re-hide during boot.
+    const revealTimers = [0, 300, 800, 1600, 3200].map((ms) =>
+      window.setTimeout(() => revealGhlIframe(iframe), ms),
+    );
+
     // Refresh after booking often reloads a tiny thank-you iframe and never
     // reaches full calendar height — swap that white bar for the success state.
     const collapseTimers: number[] = [];
     const onLoad = () => {
+      revealGhlIframe(iframe);
       collapseTimers.push(
         window.setTimeout(() => {
           if (hasRenderedRef.current) return;
@@ -228,6 +239,7 @@ export function GhlCalendarEmbed() {
       mutations.disconnect();
       resize.disconnect();
       iframe.removeEventListener("load", onLoad);
+      revealTimers.forEach((id) => window.clearTimeout(id));
       collapseTimers.forEach((id) => window.clearTimeout(id));
     };
   }, [booked, ready, embedKey, markBooked]);
