@@ -1,6 +1,3 @@
-"use client";
-
-import Script from "next/script";
 import { site } from "@/content/site";
 
 const form = site.ghl.inquiryForm;
@@ -8,6 +5,7 @@ const form = site.ghl.inquiryForm;
 /**
  * Matches Badlands / Rogue Valley GHL form sizing:
  * wrapper constrains width; card caps height so a tall iframe scrolls inside.
+ * form_embed.js is loaded once in layout.tsx (afterInteractive).
  */
 export function GhlInquiryForm() {
   const ready = Boolean(form.id && form.src);
@@ -50,7 +48,6 @@ export function GhlInquiryForm() {
           className="block w-full border-0"
           style={{ width: "100%", height: form.height }}
         />
-        <Script src={form.scriptSrc} strategy="lazyOnload" />
       </div>
     </div>
   );

@@ -48,12 +48,13 @@ export const site = {
    * Calendar: "Book a free 10 minute consultation"
    */
   ghl: {
+    origin: "https://go.4tms.com",
+    embedScriptSrc: "https://go.4tms.com/js/form_embed.js",
     calendarName: "Book a free 10 minute consultation",
     calendar: {
       id: "ksvZNwNJ68NaNLZsJvEM",
       iframeId: "ksvZNwNJ68NaNLZsJvEM_1785272090636",
       src: "https://go.4tms.com/widget/booking/ksvZNwNJ68NaNLZsJvEM",
-      scriptSrc: "https://go.4tms.com/js/form_embed.js",
       title: "Book a free 10 minute consultation",
     },
     inquiryForm: {
@@ -62,7 +63,6 @@ export const site = {
       name: "Spravato: New Web Inquiry + Params",
       title: "Spravato: New Web Inquiry + Params",
       src: "https://go.4tms.com/widget/form/uk7qrSoaKS51DwgZwKRi",
-      scriptSrc: "https://go.4tms.com/js/form_embed.js",
       height: 900,
     },
   },

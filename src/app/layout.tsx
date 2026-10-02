@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Josefin_Sans, Pontano_Sans } from "next/font/google";
+import { site } from "@/content/site";
 import "./globals.css";
 
 const josefin = Josefin_Sans({
@@ -48,8 +50,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href={site.ghl.origin} />
+        <link rel="prefetch" href={site.ghl.calendar.src} />
+      </head>
       <body className={`${josefin.variable} ${pontano.variable} font-body`}>
         {children}
+        {/*
+          GHL's embed script resizes booking/form iframes via postMessage. If the
+          listener isn't attached before the widget reports height, the iframe can
+          stay blank on first mobile load until refresh. afterInteractive registers
+          early — unlike lazyOnload, which often loses that race.
+        */}
+        <Script src={site.ghl.embedScriptSrc} strategy="afterInteractive" />
       </body>
     </html>
   );

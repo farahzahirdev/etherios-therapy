@@ -1,9 +1,7 @@
-"use client";
-
-import Script from "next/script";
 import { site } from "@/content/site";
 
 const calendar = site.ghl.calendar;
+const CALENDAR_HEIGHT = 720;
 
 export function GhlCalendarEmbed() {
   const ready = Boolean(calendar.id && calendar.src);
@@ -25,6 +23,12 @@ export function GhlCalendarEmbed() {
     );
   }
 
+  /*
+    Static iframe in markup so the browser starts fetching the widget on first
+    paint. form_embed.js is loaded once in layout.tsx with afterInteractive so
+    the resize listener is ready before the widget posts its height — lazyOnload
+    often loses that race on mobile and leaves a blank calendar until refresh.
+  */
   return (
     <div className="w-full overflow-hidden rounded-[20px] bg-white">
       <iframe
@@ -33,10 +37,14 @@ export function GhlCalendarEmbed() {
         title={calendar.title}
         allow="payment"
         scrolling="no"
-        className="block w-full border-0"
-        style={{ width: "100%", minHeight: 720, overflow: "hidden" }}
+        className="block w-full border-0 bg-transparent"
+        style={{
+          width: "100%",
+          height: CALENDAR_HEIGHT,
+          minHeight: CALENDAR_HEIGHT,
+          overflow: "hidden",
+        }}
       />
-      <Script src={calendar.scriptSrc} strategy="lazyOnload" />
     </div>
   );
 }
